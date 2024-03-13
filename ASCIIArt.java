@@ -9,7 +9,7 @@ import javax.imageio.ImageIO;
 public class ASCIIArt {
     public static void main(String args[]) throws IOException {
         ASCIIArt newArt = new ASCIIArt();
-        BufferedImage cat = ImageIO.read(new File("maxwell.png")); // Read in image as a BufferedImage
+        BufferedImage cat = ImageIO.read(new File("IMG_1866.jpg")); // Read in image as a BufferedImage
         int[][] finishedArr = newArt.imageTo2DArray(cat);
         newArt.print2DArrToFile(finishedArr);
     }
@@ -54,11 +54,11 @@ public class ASCIIArt {
                     if (y < 50) {
                         myWriter.write(" ");
                     } else if (y <= 100) {
-                        myWriter.write("z");
+                        myWriter.write(" ");
                     } else if (y <= 150) {
-                        myWriter.write("0");
+                        myWriter.write(".");
                     } else if (y <= 200) {
-                        myWriter.write("@");
+                        myWriter.write("0");
                     } else if (y <= 255) {
                         myWriter.write("$");
                     }
